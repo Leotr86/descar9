@@ -601,16 +601,16 @@ def onmessage(update,bot:ObigramClient):
                 api_hash = os.environ.get('api_hash')
                 bot_token = os.environ.get('bot_token')
                
-                # set in debug
-            #    api_id = 9514816
-            #    api_hash = '2f5b35e5872ddbfe1d4a7885f241044c'
-            #    bot_token = '5421557524:AAG82xQnX4WjbKLJALgBFAUsB9DXm3zBR5w'
+                 set in debug
+                api_id = 9514816
+                api_hash = '2f5b35e5872ddbfe1d4a7885f241044c'
+                bot_token = '5421557524:AAG82xQnX4WjbKLJALgBFAUsB9DXm3zBR5w'
 
-            #    chat_id = int(update.message.chat.id)
-            #    message_id = int(update.message.message_id)
-            #    import asyncio
-            #    asyncio.run(tlmedia.download_media(api_id,api_hash,bot_token,chat_id,message_id))
-            #    return
+                chat_id = int(update.message.chat.id)
+                message_id = int(update.message.message_id)
+                import asyncio
+                asyncio.run(tlmedia.download_media(api_id,api_hash,bot_token,chat_id,message_id))
+                return
             bot.editMessageText(message,'😵No se pudo procesar😵')
     except Exception as ex:
            print(str(ex))
@@ -624,7 +624,7 @@ def main():
 
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
-    #bot.sendMessage(-1001562832447,'🚨 ♨️bot_7.1_link_calendar♨️ Iniciado 🚨\n             @moodleupload1_bot')
+    bot.sendMessage(-1001562832447,'🚨 ♨️bot_7.1_link_calendar♨️ Iniciado 🚨\n             @moodleupload1_bot')
     bot.run()
 
 if __name__ == '__main__':

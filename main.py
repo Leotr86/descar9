@@ -596,11 +596,11 @@ def onmessage(update,bot:ObigramClient):
             url = msgText
             ddl(update,bot,message,url,file_name='',thread=thread,jdb=jdb)
         else:
-            #if update:
-            #    api_id = os.environ.get('api_id')
-            #    api_hash = os.environ.get('api_hash')
-            #    bot_token = os.environ.get('bot_token')
-            #    
+            if update:
+                api_id = os.environ.get('api_id')
+                api_hash = os.environ.get('api_hash')
+                bot_token = os.environ.get('bot_token')
+               
                 # set in debug
             #    api_id = 9514816
             #    api_hash = '2f5b35e5872ddbfe1d4a7885f241044c'
@@ -619,7 +619,7 @@ def onmessage(update,bot:ObigramClient):
 def main():
     bot_token = os.environ.get('bot_token')
 
-    #set in debug
+    set in debug
     bot_token = '5421557524:AAG82xQnX4WjbKLJALgBFAUsB9DXm3zBR5w'
 
     bot = ObigramClient(bot_token)
